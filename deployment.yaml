@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: aks-demo
-          image: aksdemoregistry123.azurecr.io/aks-demo:PLACEHOLDER
+          image: aksdemoregistry321.azurecr.io/aks-demo:PLACEHOLDER
           ports:
             - containerPort: 80
 
