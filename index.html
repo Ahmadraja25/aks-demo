@@ -3,209 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevOps Cloud Platform</title>
+    <title>Welcome to DevOps</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9fc;
-            color: #172033;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 30px;
             line-height: 1.6;
         }
 
-        /* NAVBAR */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid #e6eaf0;
+        .box {
+            background: white;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2563eb;
-        }
-
-        .logo span {
-            color: #111827;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #374151;
+        .footer {
+            margin-top: 60px;
             font-size: 14px;
-            font-weight: 600;
+            color: #888;
         }
+    </style>
+</head>
 
-        .nav-links a:hover {
-            color: #2563eb;
-        }
+<body>
 
-        /* HERO */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 130px 30px 80px;
-            background:
-                radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.16), transparent 30%),
-                radial-gradient(circle at 15% 80%, rgba(99, 102, 241, 0.12), transparent 30%),
-                #f7f9fc;
-        }
+    <div class="container">
 
-        .hero-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 70px;
-            align-items: center;
-        }
+        <h1>Welcome to DevOps 🚀</h1>
 
-        .badge {
-            display: inline-block;
-            background: #e8f0ff;
-            color: #2563eb;
-            padding: 8px 15px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 22px;
-        }
+        <h2>Build. Automate. Deploy.</h2>
 
-        .hero h1 {
-            font-size: clamp(42px, 6vw, 72px);
-            line-height: 1.05;
-            margin-bottom: 25px;
-            letter-spacing: -2px;
-        }
+        <p>
+            Welcome to our DevOps demonstration website.
+            DevOps combines development, operations, automation,
+            continuous integration, and continuous delivery to help
+            teams deliver applications faster and more reliably.
+        </p>
 
-        .hero h1 span {
-            color: #2563eb;
-        }
+        <div class="box">
+            <h2>Our DevOps Journey</h2>
 
-        .hero p {
-            font-size: 18px;
-            color: #5b6474;
-            max-width: 620px;
-            margin-bottom: 35px;
-        }
+            <p>
+                Source Code → CI/CD Pipeline → Container Registry
+                → Kubernetes → Production
+            </p>
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+            <p>
+                This application is deployed using modern
+                cloud-native technologies.
+            </p>
+        </div>
 
-        .btn {
-            padding: 14px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            transition: 0.25s;
-        }
+        <div class="footer">
+            <p>Powered by DevOps & Cloud Technologies</p>
+        </div>
 
-        .btn-primary {
-            background: #2563eb;
-            color: white;
-        }
+    </div>
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: #1d4ed8;
-        }
-
-        .btn-secondary {
-            border: 1px solid #d6dce5;
-            color: #374151;
-            background: white;
-        }
-
-        .btn-secondary:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-
-        /* PIPELINE CARD */
-        .pipeline-card {
-            background: white;
-            border: 1px solid #e4e8ef;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 60px rgba(31, 41, 55, 0.1);
-        }
-
-        .pipeline-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 25px;
-        }
-
-        .pipeline-title {
-            font-weight: bold;
-        }
-
-        .status {
-            color: #16a34a;
-            font-size: 13px;
-            font-weight: bold;
-        }
-
-        .pipeline {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .pipeline-step {
-            padding: 16px;
-            border-radius: 10px;
-            background: #f8fafc;
-            border: 1px solid #e6eaf0;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .step-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #e8f0ff;
-            color: #25
-```
+</body>
+</html>
