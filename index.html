@@ -3,57 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AKS CI/CD Demo</title>
+    <title>DevOps Deployment Dashboard</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #eef4f8;
-            color: #333;
+            background: #101827;
+            color: white;
         }
 
-        .header {
-            background: #0078d4;
-            color: white;
-            padding: 25px;
-            text-align: center;
+        .navbar {
+            padding: 20px 40px;
+            background: #172235;
+            border-bottom: 1px solid #2d3b52;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         .container {
-            max-width: 700px;
-            margin: 60px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
         }
 
-        h1 {
-            color: #0078d4;
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #aab6c8;
+            font-size: 18px;
         }
 
         .status {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #dff6dd;
-            color: #107c10;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 20px 0;
+            text-align: center;
+            background: #193d2b;
+            border: 1px solid #2e8b57;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 30px;
         }
 
-        .info {
-            margin-top: 30px;
-            text-align: left;
-            line-height: 1.8;
+        .status strong {
+            color: #4ade80;
+            font-size: 20px;
+        }
+
+        .pipeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 150px;
+            background: #1c293d;
+            padding: 25px 15px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid #34445d;
+        }
+
+        .box .icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .box h3 {
+            margin: 5px 0;
+        }
+
+        .box p {
+            color: #9eabc0;
+            font-size: 14px;
+        }
+
+        .arrow {
+            font-size: 28px;
+            color: #4ade80;
         }
 
         .footer {
-            margin-top: 30px;
-            color: #777;
+            text-align: center;
+            margin-top: 50px;
+            color: #718096;
             font-size: 14px;
         }
     </style>
@@ -61,33 +104,66 @@
 
 <body>
 
-    <div class="header">
-        <h2>Azure DevOps CI/CD</h2>
+    <div class="navbar">
+        ⚙️ DevOps Deployment Dashboard
     </div>
 
     <div class="container">
 
-        <h1>🚀 Version 2 Deployed!</h1>
-
-        <div class="status">
-            ✓ Application Running Successfully
+        <div class="title">
+            <h1>Application Deployment</h1>
+            <p>Automated CI/CD Pipeline Status</p>
         </div>
 
-        <p>
-            This is a new version of the application deployed automatically
-            through the CI/CD pipeline.
-        </p>
+        <div class="status">
+            <strong>● DEPLOYMENT SUCCESSFUL</strong>
+            <p>Application is currently running on Azure Kubernetes Service.</p>
+        </div>
 
-        <div class="info">
-            <p>📦 <strong>Source:</strong> GitHub</p>
-            <p>⚙️ <strong>Pipeline:</strong> Azure DevOps</p>
-            <p>🐳 <strong>Container:</strong> Docker</p>
-            <p>☁️ <strong>Registry:</strong> Azure Container Registry</p>
-            <p>☸️ <strong>Platform:</strong> Azure Kubernetes Service</p>
+        <div class="pipeline">
+
+            <div class="box">
+                <div class="icon">📁</div>
+                <h3>GitHub</h3>
+                <p>Source Code</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="box">
+                <div class="icon">⚙️</div>
+                <h3>Azure DevOps</h3>
+                <p>CI/CD Pipeline</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="box">
+                <div class="icon">🐳</div>
+                <h3>Docker</h3>
+                <p>Container Image</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="box">
+                <div class="icon">📦</div>
+                <h3>ACR</h3>
+                <p>Container Registry</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="box">
+                <div class="icon">☸️</div>
+                <h3>AKS</h3>
+                <p>Running Application</p>
+            </div>
+
         </div>
 
         <div class="footer">
-            CI/CD Deployment Test — Version 2
+            Azure DevOps CI/CD Demonstration • Deployment Pipeline v2
         </div>
 
     </div>
