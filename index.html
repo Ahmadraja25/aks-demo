@@ -1,82 +1,96 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure AKS Demo</title>
 
-```
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 100px;
-        background-color: #f4f6f8;
-    }
+    <title>AKS CI/CD Demo</title>
 
-    .container {
-        background: white;
-        max-width: 600px;
-        margin: auto;
-        padding: 40px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef4f8;
+            color: #333;
+        }
 
-    h1 {
-        color: #0078d4;
-    }
+        .header {
+            background: #0078d4;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
 
-    .success {
-        color: green;
-        font-size: 20px;
-        font-weight: bold;
-    }
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
 
-    .info {
-        margin-top: 25px;
-        color: #555;
-    }
-</style>
-```
+        h1 {
+            color: #0078d4;
+        }
 
+        .status {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #dff6dd;
+            color: #107c10;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .info {
+            margin-top: 30px;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
 <body>
 
-```
-<div class="container">
-
-    <h1>🚀 Azure AKS Demo</h1>
-
-    <p class="success">
-        Deployment Successful!
-    </p>
-
-    <p>
-        This application is running successfully on
-        <strong>Azure Kubernetes Service (AKS)</strong>.
-    </p>
-
-    <div class="info">
-        <p><strong>Deployment:</strong> Azure DevOps</p>
-        <p><strong>Source:</strong> GitHub</p>
-        <p><strong>Container:</strong> Docker</p>
-        <p><strong>Platform:</strong> Azure AKS</p>
+    <div class="header">
+        <h2>Azure DevOps CI/CD</h2>
     </div>
 
-    <hr>
+    <div class="container">
 
-    <p id="time"></p>
+        <h1>🚀 Version 2 Deployed!</h1>
 
-</div>
+        <div class="status">
+            ✓ Application Running Successfully
+        </div>
 
-<script>
-    document.getElementById("time").innerHTML =
-        "Page loaded at: " + new Date().toLocaleString();
-</script>
-```
+        <p>
+            This is a new version of the application deployed automatically
+            through the CI/CD pipeline.
+        </p>
+
+        <div class="info">
+            <p>📦 <strong>Source:</strong> GitHub</p>
+            <p>⚙️ <strong>Pipeline:</strong> Azure DevOps</p>
+            <p>🐳 <strong>Container:</strong> Docker</p>
+            <p>☁️ <strong>Registry:</strong> Azure Container Registry</p>
+            <p>☸️ <strong>Platform:</strong> Azure Kubernetes Service</p>
+        </div>
+
+        <div class="footer">
+            CI/CD Deployment Test — Version 2
+        </div>
+
+    </div>
 
 </body>
 </html>
