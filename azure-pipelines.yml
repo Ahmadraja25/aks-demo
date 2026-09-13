@@ -31,7 +31,7 @@ steps:
   displayName: Deploy Application to AKS
   inputs:
     action: 'deploy'
-    kubernetesServiceConnection: 'aks-svc-name'
+    kubernetesServiceConnection: 'aks-svc'
     manifests: |
       deployment.yaml
     containers: |
